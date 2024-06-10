@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+    /* Define your custom theme colors as CSS variables */
+    --color-primary: #fbcfe8;   /* Primary color */
+    --color-secondary: #fda4af; /* Secondary color */
+    --color-accent: #86efac;     /* Accent color */
+    --color-neutral: #bbf7d0;    /* Neutral color */
+    --color-base-100: #ffffff;   /* Base 100 color */
+    --color-info: #7dd3fc;       /* Information color */
+    --color-success: #22c55e;    /* Success color */
+    --color-warning: #fde047;    /* Warning color */
+    --color-error: #ef4444;      /* Error color */
+  }
+/* Add any custom CSS here */
+body{/* src/index.css */
+    /* Add any other styles using your custom theme colors */
+    
+    background-color: #1f2937;
+    height: 100vh;
+    color: var(--color-primary);
+}
