@@ -15,6 +15,7 @@
     --color-warning: #fde047;    /* Warning color */
     --color-error: #ef4444;      /* Error color */
   }
+
 /* Add any custom CSS here */
 body{/* src/index.css */
     /* Add any other styles using your custom theme colors */
@@ -22,4 +23,8 @@ body{/* src/index.css */
     background-color: #1f2937;
     height: 100vh;
     color: var(--color-primary);
+}
+
+.text-center-custom {
+  text-align: center;
 }

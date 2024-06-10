@@ -21,6 +21,7 @@ export default {
           "success": "#22c55e",
           "warning": "#fde047",
           "error": "#ef4444",
+          "backgoundText": "#1f2937",
         },
       },
       // Other pre-defined themes can be added here
