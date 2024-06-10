@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import logo from './assets/logo.png';
+
 import './styles/App.css';
 import ExpenseTable from './components/ExpenseTable';
 import Nav from './components/Nav';

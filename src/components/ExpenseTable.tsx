@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface ExpenseTableItem {
   id: number;
   date: string;
