@@ -11,6 +11,7 @@ function App() {
         <div rounded-full>
           <img src="./logo.png" className="w-20 h-20" alt="logo" />
         </div>
+        <h1 className="text-3xl font-bold text-center">Budget Buddy</h1>
       </div>
       <ExpenseTable />
     </>
