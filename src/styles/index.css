@@ -16,15 +16,33 @@
     --color-error: #ef4444;      /* Error color */
   }
 
+  html, body {
+    min-height: 100vh;
+  }
+
+  body::-webkit-scrollbar {
+    display: none !important;
+  }
+  body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none !important;  /* Firefox */
+  }
+
 /* Add any custom CSS here */
-body{/* src/index.css */
-    /* Add any other styles using your custom theme colors */
-    
-    background-color: #1f2937;
-    height: 100vh;
-    color: var(--color-primary);
+body {
+  /* Add any other styles using your custom theme colors */
+  background-color: #1f2937;
+  color: var(--color-primary);
+  margin: 0;
+  scrollbar-width: none !important;
+  overflow-y: scroll !important;
+  overflow-x: hidden;
 }
 
 .text-center-custom {
   text-align: center;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
 }
