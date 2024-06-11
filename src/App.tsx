@@ -52,10 +52,12 @@ function App() {
 
   return (
     <>
-      <Nav resetTable={handleReset} />
-      <BudgetForm onSubmit={handleData} />
-      <Filter onSelectCategory={handleSelectCategory} />
-      <ExpenseTable expenses={isVisible} onDelete={handleDelete} />
+      <div className="min-h-screen flex flex-col overflow-hidden">
+        <Nav resetTable={handleReset} />
+        <BudgetForm onSubmit={handleData} />
+        <Filter onSelectCategory={handleSelectCategory} />
+        <ExpenseTable expenses={isVisible} onDelete={handleDelete} />
+      </div>
     </>
   );
 }
