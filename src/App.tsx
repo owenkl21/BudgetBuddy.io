@@ -5,7 +5,6 @@ import ExpenseTable from './components/ExpenseTable';
 import Nav from './components/Nav';
 import Filter from './components/Filter';
 import BudgetForm from './components/BudgetForm';
-import { set } from 'react-hook-form';
 
 interface FormData {
   date: string;
