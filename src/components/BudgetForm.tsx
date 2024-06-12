@@ -1,5 +1,4 @@
 import { useForm } from 'react-hook-form';
-import { useMediaQuery } from 'react-responsive';
 
 interface FormData {
   date: string;
