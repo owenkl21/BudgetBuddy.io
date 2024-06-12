@@ -1,4 +1,5 @@
 import { useForm } from 'react-hook-form';
+import { useMediaQuery } from 'react-responsive';
 
 interface FormData {
   date: string;
@@ -10,6 +11,7 @@ interface FormData {
 interface BudgetFormProps {
   onSubmit: (data: FormData) => void;
 }
+
 const BudgetForm = ({ onSubmit }: BudgetFormProps) => {
   const {
     register,
@@ -43,7 +45,7 @@ const BudgetForm = ({ onSubmit }: BudgetFormProps) => {
               id="date"
               type="date"
               placeholder=""
-              className="mb-4 text-primary focus:outline-neutral/20 focus:border-neutral bg-slate-700 input input-bordered border-primary w-full"
+              className=" mt-2 mb-4 text-primary focus:outline-neutral/20 focus:border-neutral bg-slate-700 input input-bordered border-primary w-full"
             />
             {errors.date && (
               <span className="text-error mb-2">This field is required</span>
@@ -54,7 +56,7 @@ const BudgetForm = ({ onSubmit }: BudgetFormProps) => {
               id="description"
               type="text"
               placeholder="Type here"
-              className="mb-4 text-primary focus:outline-neutral/20 focus:border-neutral bg-slate-700 input input-bordered border-primary w-full"
+              className=" mt-2 mb-4 text-primary focus:outline-neutral/20 focus:border-neutral bg-slate-700 input input-bordered border-primary w-full"
             />
             {errors.description && (
               <span className="text-error mb-2">This field is required</span>
@@ -67,7 +69,7 @@ const BudgetForm = ({ onSubmit }: BudgetFormProps) => {
               id="amount"
               type="number"
               placeholder="Type here"
-              className="mb-4 text-primary focus:outline-neutral/20 focus:border-neutral bg-slate-700 input input-bordered border-primary w-full"
+              className="[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none mt-2 mb-4 text-primary focus:outline-neutral/20 focus:border-neutral bg-slate-700 input input-bordered border-primary w-full"
             />
             {errors.amount && (
               <span className="text-error mb-2">This field is required</span>
@@ -78,7 +80,7 @@ const BudgetForm = ({ onSubmit }: BudgetFormProps) => {
               id="category"
               type="text"
               placeholder="Type here"
-              className="mb-4 text-primary focus:outline-neutral/20 focus:border-neutral bg-slate-700 input input-bordered border-primary w-full"
+              className="mt-2 mb-4 text-primary focus:outline-neutral/20 focus:border-neutral bg-slate-700 input input-bordered border-primary w-full"
             />
             {errors.category && (
               <span className="text-error mb-2">This field is required</span>

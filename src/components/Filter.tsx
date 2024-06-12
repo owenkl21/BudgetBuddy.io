@@ -6,7 +6,7 @@ interface FilterProps {
 
 const Filter = ({ onSelectCategory }: FilterProps) => {
   return (
-    <div className="dropdown dropdown-right font-semibold m-4 mb-6 ">
+    <div className="  w-[150px] md:w-[200px] dropdown dropdown-bottom  font-semibold m-4 mb-6 ">
       <div
         tabIndex={0}
         role="button"
@@ -26,13 +26,15 @@ const Filter = ({ onSelectCategory }: FilterProps) => {
       </div>
       <ul
         tabIndex={0}
-        className=" text-[#1f2937] dropdown-content text-backgroundText z-[1] menu p-2 shadow bg-neutral rounded-box w-[700px] max-h-40 overflow-x-auto"
+        className=" text-[#1f2937] dropdown-content text-backgroundText w-[140px] md:w-[190px] z-[1] ml-1 menu p-2 shadow bg-neutral rounded-box "
       >
-        {categories.map((category) => (
-          <li key={category} onClick={() => onSelectCategory(category)}>
-            <a>{category}</a>
-          </li>
-        ))}
+        <div className="max-h-40 overflow-y-auto">
+          {categories.map((category) => (
+            <li key={category} onClick={() => onSelectCategory(category)}>
+              <a>{category}</a>
+            </li>
+          ))}
+        </div>
       </ul>
     </div>
   );
