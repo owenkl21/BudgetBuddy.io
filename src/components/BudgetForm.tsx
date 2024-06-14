@@ -1,5 +1,5 @@
 import { useForm } from 'react-hook-form';
-
+import categories from '../modules/categories';
 interface FormData {
   date: string;
   description: string;
@@ -27,6 +27,7 @@ const BudgetForm = ({ onSubmit }: BudgetFormProps) => {
     onSubmit(formData);
     reset();
   };
+
   return (
     <div className="flex justify-center items-center p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12">
       <form
@@ -74,13 +75,18 @@ const BudgetForm = ({ onSubmit }: BudgetFormProps) => {
               <span className="text-error mb-2">This field is required</span>
             )}
             <label htmlFor="category">Category</label>
-            <input
+            <select
               {...register('category', { required: true })}
               id="category"
-              type="text"
-              placeholder="Type here"
-              className="mt-2 mb-4 text-primary focus:outline-neutral/20 focus:border-neutral bg-slate-700 input input-bordered border-primary w-full"
-            />
+              className="mt-2 mb-4 text-primary focus:outline-neutral/20 focus:border-neutral bg-slate-700 select select-bordered border-primary w-full"
+            >
+              <option value="" disabled selected>
+                Select category
+              </option>
+              {categories.map((category) => (
+                <option value="category">{category}</option>
+              ))}
+            </select>
             {errors.category && (
               <span className="text-error mb-2">This field is required</span>
             )}
