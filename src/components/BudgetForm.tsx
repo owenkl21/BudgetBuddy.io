@@ -89,7 +89,7 @@ const BudgetForm = ({ onSubmit }: BudgetFormProps) => {
         <div className="flex justify-center w-full">
           <button
             type="submit"
-            className="my-3 btn btn-neutral btn-md p-2 w-full sm:w-[450px]"
+            className="my-3 btn btn-neutral btn-md p-2 w-full"
           >
             Submit
           </button>
